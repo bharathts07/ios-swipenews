@@ -14,6 +14,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func continueGooglePressed(_ sender: UIButton) {
+        print("Google Button tapped")
+    }
+    
+    @IBAction func continueGuestPressed(_ sender: UIButton) {
+        print("Guest Button tapped")
+    }
 }
 

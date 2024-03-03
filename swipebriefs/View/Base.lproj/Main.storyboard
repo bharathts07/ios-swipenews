@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swipebriefs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-gradient-background" translatesAutoresizingMaskIntoConstraints="NO" id="8qm-Wf-Crw">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="3Jy-eZ-GKF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPx-me-D69" userLabel="landingInfo">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="360"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news" translatesAutoresizingMaskIntoConstraints="NO" id="Bnm-La-1jt">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="360"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Bnm-La-1jt" secondAttribute="trailing" id="452-Fc-bQL"/>
+                                            <constraint firstItem="Bnm-La-1jt" firstAttribute="centerY" secondItem="MPx-me-D69" secondAttribute="centerY" id="AVn-Dd-8Av"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bnm-La-1jt" secondAttribute="bottom" id="Owy-Hr-OWL"/>
+                                            <constraint firstItem="Bnm-La-1jt" firstAttribute="leading" secondItem="MPx-me-D69" secondAttribute="leading" id="R6J-xL-zHC"/>
+                                            <constraint firstItem="Bnm-La-1jt" firstAttribute="centerX" secondItem="MPx-me-D69" secondAttribute="centerX" id="V0E-Xv-4Pq"/>
+                                            <constraint firstItem="Bnm-La-1jt" firstAttribute="top" secondItem="MPx-me-D69" secondAttribute="top" id="kiH-yS-yg7"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsL-Na-sPF" userLabel="loginInfo">
+                                        <rect key="frame" x="0.0" y="433" width="393" height="360"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fED-zT-shA">
+                                                <rect key="frame" x="102.66666666666669" y="135.66666666666663" width="188" height="88.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6s-6F-9ta">
+                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Continue with Google"/>
+                                                        <connections>
+                                                            <action selector="continueGooglePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ho-cj-0DE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kE-1r-YKE">
+                                                        <rect key="frame" x="0.0" y="54.333333333333371" width="188" height="34.333333333333343"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Continue as Guest"/>
+                                                        <connections>
+                                                            <action selector="continueGuestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9sQ-oz-h9C"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="3kE-1r-YKE" firstAttribute="height" secondItem="n6s-6F-9ta" secondAttribute="height" id="uM7-2a-L2i"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fED-zT-shA" firstAttribute="centerX" secondItem="XsL-Na-sPF" secondAttribute="centerX" id="P09-3B-r4f"/>
+                                            <constraint firstItem="fED-zT-shA" firstAttribute="centerY" secondItem="XsL-Na-sPF" secondAttribute="centerY" id="xpe-3s-CYk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8qm-Wf-Crw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4dJ-Yd-5TZ"/>
+                            <constraint firstAttribute="trailing" secondItem="3Jy-eZ-GKF" secondAttribute="trailing" id="56D-ym-KW7"/>
+                            <constraint firstItem="8qm-Wf-Crw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ef2-64-hhZ"/>
+                            <constraint firstAttribute="bottom" secondItem="3Jy-eZ-GKF" secondAttribute="bottom" id="McO-br-dw1"/>
+                            <constraint firstAttribute="bottom" secondItem="8qm-Wf-Crw" secondAttribute="bottom" id="m3z-E0-ILd"/>
+                            <constraint firstItem="8qm-Wf-Crw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pXA-uh-pM5"/>
+                            <constraint firstItem="3Jy-eZ-GKF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tsH-o9-q0z"/>
+                            <constraint firstItem="3Jy-eZ-GKF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yPC-5e-yNJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="-35.211267605633807"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue-gradient-background" width="1000" height="2000"/>
+        <image name="news" width="1024" height="1024"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
